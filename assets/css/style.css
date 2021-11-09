@@ -1,3 +1,43 @@
+body {
+    background-color: gray;
+    background: url('../images/concert-g40fc9880e_1920.jpg') no-repeat center top;
+    background-size: cover;
+}
+
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.quiz-box {
+    height: 500px;
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.questions {
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.answers {
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.answer-button {
+    height: 40%;
+    width: 40%;
+    margin: 1%;
+}
+
+.quiz-bottom {
+    text-align: right;
+    margin-right: 1%;
 }
