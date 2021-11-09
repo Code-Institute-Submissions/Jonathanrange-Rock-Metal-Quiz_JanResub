@@ -52,44 +52,58 @@ let questions = [
     {
         question: 'What is, without a doubt, the best music genre in the world?',
         answers: {
-            A: 'Metal',
-            B: 'Metal',
-            C: 'Metal',
+            A: 'Rap',
+            B: 'Classical',
+            C: 'Plastic',
             D: 'Metal (Preferably LOUD)'
         },
-        correctAnswer: 'A, B, C, D'
+        correctAnswer: 'Metal (Preferably LOUD)'
     }
 ]
 let questionBox = document.getElementById('question-box');
 let questionH2 = document.getElementById('question-h2')
 let answerButton = document.getElementsByClassName('answer-button');
 let nextButton = document.getElementById('next-button');
+let scoretracker = document.getElementById('score');
 let b1 = document.getElementById('button-1');
 let b2 = document.getElementById('button-2');
 let b3 = document.getElementById('button-3');
 let b4 = document.getElementById('button-4');
 
+let q = 0;
+let a = 0;
+let correct = 0;
+let totalQuestions = 6;
+function revealAnswer(event) {
+        if (this.innerHTML === questions[q].correctAnswer){
+            this.style.backgroundColor = "lightgreen";
+            questionH2.innerHTML = 'Correct!'
+            correct++;
+        } else {
+            this.style.backgroundColor = "red";
+            questionH2.innerHTML = 'Incorrect! </br> The right answer was: ' + '<strong>' + questions[q].correctAnswer; + '</strong>'
+        }
+        q++;
+        a++;
+        scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+
+}
+for (i = 0; i < answerButton.length; i++){
+    answerButton[i].addEventListener("click", revealAnswer);
+}
+
+questionH2.innerHTML = questions[q].question;
+answerButton[0].innerHTML = questions[a].answers.A;
+answerButton[1].innerHTML = questions[a].answers.B;
+answerButton[2].innerHTML = questions[a].answers.C;
+answerButton[3].innerHTML = questions[a].answers.D;
 
 nextButton.addEventListener('click', nextQuestion);
-
-questionH2.innerHTML = questions[0].question;
-answerButton[0].innerHTML = questions[0].answers.A;
-answerButton[1].innerHTML = questions[0].answers.B;
-answerButton[2].innerHTML = questions[0].answers.C;
-answerButton[3].innerHTML = questions[0].answers.D;
-
-
-let q = 1;
-let a = 1;
 function nextQuestion(){
     questionH2.innerHTML = questions[q].question;
-    q++;
     
     answerButton[0].innerHTML = questions[a].answers.A;
     answerButton[1].innerHTML = questions[a].answers.B;
     answerButton[2].innerHTML = questions[a].answers.C;
     answerButton[3].innerHTML = questions[a].answers.D;
-    a++;
 }
-
-
