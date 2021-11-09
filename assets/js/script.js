@@ -7,7 +7,7 @@ let questions = [
             C: 'Black Sabbath',
             D: 'Pink Floyd'
         },
-        correctAnswer: 'C' 
+        correctAnswer: 'Black Sabbath' 
     },
     {
         question: 'Finish the following lyrics: "We will, we will ..."',
@@ -17,7 +17,7 @@ let questions = [
             C: 'Eat dinner',
             D: 'Punch you in the face'
         },
-        correctAnswer: 'B'
+        correctAnswer: 'Rock you'
     },
     {
         question: 'Rock and metal music is often characterized by the use of distortion on a particular instrument. Which one?',
@@ -27,7 +27,7 @@ let questions = [
             C: 'Piano',
             D: 'Bass'
         },
-        correctAnswer: 'A' 
+        correctAnswer: 'Guitar' 
     },
     {
         question: 'In 1969, Jimi Hendrix played at one of the most legendary music festivals of all time. What was it called?',
@@ -37,7 +37,7 @@ let questions = [
             C: 'Woodstock',
             D: 'Ragnarök'
         },
-        correctAnswer: 'C' 
+        correctAnswer: 'Woodstock' 
     },
     {
         question: 'Metal shows are infamous for their crazy crowds, with people running into each other as a sort of ritual. This is often referred to as a ...',
@@ -47,7 +47,7 @@ let questions = [
             C: 'Party',
             D: 'Moshpit'
         },
-        correctAnswer: 'D' 
+        correctAnswer: 'Moshpit' 
     },
     {
         question: 'What is, without a doubt, the best music genre in the world?',
@@ -60,14 +60,27 @@ let questions = [
         correctAnswer: 'A, B, C, D'
     }
 ]
+let questionBox = document.getElementById('question-box');
 let questionH2 = document.getElementById('question-h2')
 let answerButton = document.getElementsByClassName('answer-button');
 let nextButton = document.getElementById('next-button');
+let b1 = document.getElementById('button-1');
+let b2 = document.getElementById('button-2');
+let b3 = document.getElementById('button-3');
+let b4 = document.getElementById('button-4');
+
 
 nextButton.addEventListener('click', nextQuestion);
 
-let q = 0;
-let a = 0;
+questionH2.innerHTML = questions[0].question;
+answerButton[0].innerHTML = questions[0].answers.A;
+answerButton[1].innerHTML = questions[0].answers.B;
+answerButton[2].innerHTML = questions[0].answers.C;
+answerButton[3].innerHTML = questions[0].answers.D;
+
+
+let q = 1;
+let a = 1;
 function nextQuestion(){
     questionH2.innerHTML = questions[q].question;
     q++;
