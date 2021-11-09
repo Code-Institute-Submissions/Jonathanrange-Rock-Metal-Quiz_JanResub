@@ -60,3 +60,23 @@ let questions = [
         correctAnswer: 'A, B, C, D'
     }
 ]
+let questionH2 = document.getElementById('question-h2')
+let answerButton = document.getElementsByClassName('answer-button');
+let nextButton = document.getElementById('next-button');
+
+nextButton.addEventListener('click', nextQuestion);
+
+let q = 0;
+let a = 0;
+function nextQuestion(){
+    questionH2.innerHTML = questions[q].question;
+    q++;
+    
+    answerButton[0].innerHTML = questions[a].answers.A;
+    answerButton[1].innerHTML = questions[a].answers.B;
+    answerButton[2].innerHTML = questions[a].answers.C;
+    answerButton[3].innerHTML = questions[a].answers.D;
+    a++;
+}
+
+

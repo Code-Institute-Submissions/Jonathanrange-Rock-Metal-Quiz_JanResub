@@ -9,23 +9,34 @@ body {
 h1 {
     font-family: Kanit, sans-serif;
     text-align: center;
+    font-size: 350%;
+    font-weight: 900;
 }
 
-.quiz-box {
+#quiz-box {
     height: 500px;
     width: 70%;
     background-color: white;
     margin: 0 auto;
 }
 
-.questions {
-    border: 1px solid black;
+#question-box {
     height: 200px;
-    width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
 }
 
-.answers {
+#question-h2 {
+    font-family: Kanit, sans-serif;
+    font-weight: 300;
+    font-size: 200%;
+}
+
+#answer-box {
     border: 1px solid black;
     height: 200px;
     width: 100%;
@@ -39,7 +50,7 @@ h1 {
     margin: 1%;
 }
 
-.quiz-bottom {
+#quiz-bottom {
     text-align: right;
     margin-right: 1%;
 }
