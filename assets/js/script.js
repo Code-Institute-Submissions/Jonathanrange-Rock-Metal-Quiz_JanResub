@@ -1,6 +1,6 @@
 let questions = [
     {
-        question: 'Which band is often cited as being one of the founders of heavy metal?',
+        question: '<strong>#1.</strong> Which band is often cited as being one of the founders of heavy metal?',
         answers: {
             A: 'The Who',
             B: 'ABBA',
@@ -10,7 +10,7 @@ let questions = [
         correctAnswer: 'Black Sabbath' 
     },
     {
-        question: 'Finish the following lyrics: "We will, we will ..."',
+        question: '<strong>#2.</strong> Finish the following lyrics: "We will, we will ..."',
         answers: {
             A: 'Give you a haircut',
             B: 'Rock you',
@@ -20,7 +20,7 @@ let questions = [
         correctAnswer: 'Rock you'
     },
     {
-        question: 'Rock and metal music is often characterized by the use of distortion on a particular instrument. Which one?',
+        question: '<strong>#3.</strong> Rock and metal music is often characterized by the use of distortion on a particular instrument. Which one?',
         answers: {
             A: 'Guitar',
             B: 'Trombone',
@@ -30,7 +30,7 @@ let questions = [
         correctAnswer: 'Guitar' 
     },
     {
-        question: 'In 1969, Jimi Hendrix played at one of the most legendary music festivals of all time. What was it called?',
+        question: '<strong>#4.</strong> In 1969, Jimi Hendrix played at one of the most legendary music festivals of all time. What was it called?',
         answers: {
             A: 'Flower Power',
             B: 'Lollapalooza',
@@ -40,7 +40,7 @@ let questions = [
         correctAnswer: 'Woodstock' 
     },
     {
-        question: 'Metal shows are infamous for their crazy crowds, with people running into each other as a sort of ritual. This is often referred to as a ...',
+        question: '<strong>#5.</strong> Metal shows are infamous for their crazy crowds, with people running into each other as a sort of ritual. This is often referred to as a ...',
         answers: {
             A: 'Dance',
             B: 'Way to get to know each other',
@@ -50,7 +50,7 @@ let questions = [
         correctAnswer: 'Moshpit' 
     },
     {
-        question: 'What is, without a doubt, the best music genre in the world?',
+        question: '<strong>#6.</strong> What is, without a doubt, the best music genre in the world?',
         answers: {
             A: 'Rap',
             B: 'Classical',
@@ -74,14 +74,18 @@ let q = 0;
 let a = 0;
 let correct = 0;
 let totalQuestions = 6;
+let currentQuestion = 0;
 function revealAnswer(event) {
-        if (this.innerHTML === questions[q].correctAnswer){
-            this.style.backgroundColor = "lightgreen";
+        if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
+            this.style.backgroundColor = "chartreuse";
             questionH2.innerHTML = 'Correct!'
             correct++;
-        } else {
+            currentQuestion++;
+        } 
+        else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == q){
             this.style.backgroundColor = "red";
-            questionH2.innerHTML = 'Incorrect!'
+            questionH2.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + questions[q].correctAnswer + '</strong>';
+            currentQuestion++;
         }
         scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
@@ -98,12 +102,16 @@ answerButton[3].innerHTML = questions[a].answers.D;
 
 nextButton.addEventListener('click', nextQuestion);
 function nextQuestion(){
-    q++;
-    a++;
-    questionH2.innerHTML = questions[q].question;
-    
-    answerButton[0].innerHTML = questions[a].answers.A;
-    answerButton[1].innerHTML = questions[a].answers.B;
-    answerButton[2].innerHTML = questions[a].answers.C;
-    answerButton[3].innerHTML = questions[a].answers.D;
+    if (currentQuestion > q){
+        q++;
+        a++;
+        questionH2.innerHTML = questions[q].question;
+        answerButton[0].innerHTML = questions[a].answers.A;
+        answerButton[1].innerHTML = questions[a].answers.B;
+        answerButton[2].innerHTML = questions[a].answers.C;
+        answerButton[3].innerHTML = questions[a].answers.D;
+}
+    else {
+        alert('Please select your answer to continue');
+    }
 }
