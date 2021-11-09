@@ -60,6 +60,7 @@ let questions = [
         correctAnswer: 'Metal (Preferably LOUD)'
     }
 ]
+let quizBox = document.getElementById('quiz-box');
 let questionBox = document.getElementById('question-box');
 let questionH2 = document.getElementById('question-h2')
 let answerButton = document.getElementsByClassName('answer-button');
@@ -77,13 +78,13 @@ let totalQuestions = 6;
 let currentQuestion = 0;
 function revealAnswer(event) {
         if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
-            this.style.backgroundColor = "chartreuse";
+            quizBox.style.backgroundColor = "chartreuse";
             questionH2.innerHTML = 'Correct!'
             correct++;
             currentQuestion++;
         } 
         else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == q){
-            this.style.backgroundColor = "red";
+            quizBox.style.backgroundColor = "red";
             questionH2.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + questions[q].correctAnswer + '</strong>';
             currentQuestion++;
         }
@@ -109,10 +110,7 @@ function nextQuestion(){
         answerButton[1].innerHTML = questions[a].answers.B;
         answerButton[2].innerHTML = questions[a].answers.C;
         answerButton[3].innerHTML = questions[a].answers.D;
-        b1.style.backgroundColor = 'rgb(225, 225, 225)';
-        b2.style.backgroundColor = 'rgb(225, 225, 225)';
-        b3.style.backgroundColor = 'rgb(225, 225, 225)';
-        b4.style.backgroundColor = 'rgb(225, 225, 225)';
+        quizBox.style.backgroundColor = 'white';
 }
     else {
         alert('Please select your answer to continue');
