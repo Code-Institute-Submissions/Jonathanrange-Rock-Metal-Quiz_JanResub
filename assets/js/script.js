@@ -81,10 +81,8 @@ function revealAnswer(event) {
             correct++;
         } else {
             this.style.backgroundColor = "red";
-            questionH2.innerHTML = 'Incorrect! </br> The right answer was: ' + '<strong>' + questions[q].correctAnswer; + '</strong>'
+            questionH2.innerHTML = 'Incorrect!'
         }
-        q++;
-        a++;
         scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
 }
@@ -100,6 +98,8 @@ answerButton[3].innerHTML = questions[a].answers.D;
 
 nextButton.addEventListener('click', nextQuestion);
 function nextQuestion(){
+    q++;
+    a++;
     questionH2.innerHTML = questions[q].question;
     
     answerButton[0].innerHTML = questions[a].answers.A;
