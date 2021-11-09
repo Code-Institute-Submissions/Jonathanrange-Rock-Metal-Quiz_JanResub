@@ -99,8 +99,6 @@ answerButton[1].innerHTML = questions[a].answers.B;
 answerButton[2].innerHTML = questions[a].answers.C;
 answerButton[3].innerHTML = questions[a].answers.D;
 
-
-
 nextButton.addEventListener('click', nextQuestion);
 function nextQuestion(){
     if (currentQuestion > q){
@@ -115,12 +113,6 @@ function nextQuestion(){
         b2.style.backgroundColor = 'rgb(225, 225, 225)';
         b3.style.backgroundColor = 'rgb(225, 225, 225)';
         b4.style.backgroundColor = 'rgb(225, 225, 225)';
-        function turnLight(){
-            b1.style.backgroundColor = 'pink';
-        }
-        function turnDark(){
-            b1.style.backgroundColor = 'blue';
-        }
 }
     else {
         alert('Please select your answer to continue');
