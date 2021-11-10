@@ -76,6 +76,7 @@ let a = 0;
 let correct = 0;
 let totalQuestions = 6;
 let currentQuestion = 0;
+
 function revealAnswer(event) {
         if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
             quizBox.style.backgroundColor = "chartreuse";

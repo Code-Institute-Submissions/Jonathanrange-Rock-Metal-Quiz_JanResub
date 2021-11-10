@@ -13,11 +13,22 @@ h1 {
     font-weight: 900;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #quiz-box {
     height: 500px;
     width: 70%;
     background-color: white;
     margin: 0 auto;
+}
+
+#start-button {
+    height: 30%;
+    width: 50%;
+    margin-top: 5%;
 }
 
 #question-box {
