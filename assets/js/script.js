@@ -78,7 +78,15 @@ let totalQuestions = 6;
 let currentQuestion = 0;
 
 function revealAnswer(event) {
-        if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
+        if (this.innerHTML === questions[q].correctAnswer && currentQuestion == 5){
+        quizBox.style.backgroundColor = "chartreuse";
+        questionH2.innerHTML = 'Correct!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+        } 
+        else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == 5){
+            quizBox.style.backgroundColor = "red";
+            questionH2.innerHTML = 'Incorrect!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+            } 
+        else if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
             quizBox.style.backgroundColor = "chartreuse";
             questionH2.innerHTML = 'Correct!'
             correct++;
@@ -89,6 +97,7 @@ function revealAnswer(event) {
             questionH2.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + questions[q].correctAnswer + '</strong>';
             currentQuestion++;
         }
+        
         scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 }
 for (i = 0; i < answerButton.length; i++){
