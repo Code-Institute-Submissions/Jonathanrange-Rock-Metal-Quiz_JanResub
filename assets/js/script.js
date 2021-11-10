@@ -79,12 +79,15 @@ let currentQuestion = 0;
 
 function revealAnswer(event) {
         if (this.innerHTML === questions[q].correctAnswer && currentQuestion == 5){
-        quizBox.style.backgroundColor = "chartreuse";
-        questionH2.innerHTML = 'Correct!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+            correct++;
+            currentQuestion++;
+            quizBox.style.backgroundColor = "chartreuse";
+            questionH2.innerHTML = 'Correct!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
         } 
         else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == 5){
+            currentQuestion++;
             quizBox.style.backgroundColor = "red";
-            questionH2.innerHTML = 'Incorrect!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+            questionH2.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + questions[q].correctAnswer + '</strong>' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
             } 
         else if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
             quizBox.style.backgroundColor = "chartreuse";
@@ -112,7 +115,10 @@ answerButton[3].innerHTML = questions[a].answers.D;
 
 nextButton.addEventListener('click', nextQuestion);
 function nextQuestion(){
-    if (currentQuestion > q){
+    if (currentQuestion == totalQuestions){
+        alert('Click the restart button to try again');
+    }
+    else if (currentQuestion > q){
         q++;
         a++;
         questionH2.innerHTML = questions[q].question;
@@ -122,6 +128,7 @@ function nextQuestion(){
         answerButton[3].innerHTML = questions[a].answers.D;
         quizBox.style.backgroundColor = 'white';
 }
+    
     else {
         alert('Please select your answer to continue');
     }
