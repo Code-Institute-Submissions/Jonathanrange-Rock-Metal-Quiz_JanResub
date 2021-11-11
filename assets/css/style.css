@@ -29,6 +29,8 @@ a {
     width: 70%;
     background-color: white;
     margin: 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0 0 7px; /* Code from https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
 }
 
 button {
