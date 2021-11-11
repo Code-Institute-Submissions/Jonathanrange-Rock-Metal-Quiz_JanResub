@@ -4,6 +4,8 @@ body {
     background-color: gray;
     background: url('../images/concert-g40fc9880e_1920.jpg') no-repeat center top;
     background-size: cover;
+    height: 100vh;
+    padding: 0%;
 }
 
 h1 {
@@ -29,10 +31,23 @@ a {
     margin: 0 auto;
 }
 
+button {
+    background-color: rgb(230, 230, 230);
+}
+
+button:hover {
+    background-color:rgb(240, 240, 240);
+}
+
 #start-button {
+    font-family: Kanit, sans-serif;
+    font-size: 170%;
+    font-weight: 500;
     height: 30%;
-    width: 50%;
+    width: 40%;
     margin-top: 5%;
+    border: 0.5px solid gray;
+    border-radius: 10px 10px;
 }
 
 #question-box {
@@ -59,13 +74,24 @@ a {
 }
 
 .answer-button {
-    height: 40%;
+    font-family: Kanit, sans-serif;
+    font-size: 125%;
+    font-weight: 300;
+    height: 30%;
     width: 40%;
     margin: 1%;
+    border: 0.5px solid gray;
+    border-radius: 10px 10px;
 }
 
 #quiz-bottom {
+    font-family: Kanit, sans-serif;
     text-align: right;
     margin-right: 2%;
     margin-top: 2%;
+}
+
+#quiz-bottom button {
+    border: 0.5px solid gray;
+    border-radius: 10px 10px;
 }

@@ -77,8 +77,10 @@ let correct = 0;
 let totalQuestions = 6;
 let currentQuestion = 0;
 
+scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+
 function revealAnswer(event) {
-        if (this.innerHTML === questions[q].correctAnswer && currentQuestion == 5){
+        if (this.innerHTML === questions[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
             correct++;
             currentQuestion++;
             quizBox.style.backgroundColor = "chartreuse";
@@ -127,8 +129,7 @@ function nextQuestion(){
         answerButton[2].innerHTML = questions[a].answers.C;
         answerButton[3].innerHTML = questions[a].answers.D;
         quizBox.style.backgroundColor = 'white';
-}
-    
+    }
     else {
         alert('Please select your answer to continue');
     }
