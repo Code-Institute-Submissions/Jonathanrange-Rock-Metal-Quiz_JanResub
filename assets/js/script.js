@@ -50,7 +50,27 @@ let questions = [
         correctAnswer: 'Moshpit' 
     },
     {
-        question: '<strong>#6.</strong> What is, without a doubt, the best music genre in the world?',
+        question: '<strong>#6.</strong> Who wrote the song "Enter Sandman"?',
+        answers: {
+            A: 'Metallica',
+            B: 'Megadeth',
+            C: 'Slayer',
+            D: 'Anthrax'
+        },
+        correctAnswer: 'Metallica'
+    },
+    {
+        question: '<strong>#7.</strong> Every new genre has its roots in another genre. From which one did rock originate?',
+        answers: {
+            A: 'Blues',
+            B: 'Ancient Egyptian Folk Music',
+            C: 'Techno',
+            D: 'Funk'
+        },
+        correctAnswer: 'Blues'
+    },
+    {
+        question: '<strong>#8.</strong> What is, without a doubt, the best music genre in the world?',
         answers: {
             A: 'Rap',
             B: 'Classical',
@@ -74,7 +94,7 @@ let b4 = document.getElementById('button-4');
 let q = 0;
 let a = 0;
 let correct = 0;
-let totalQuestions = 6;
+let totalQuestions = 8;
 let currentQuestion = 0;
 
 scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
@@ -86,7 +106,7 @@ function revealAnswer(event) {
             quizBox.style.backgroundColor = "chartreuse";
             questionH2.innerHTML = 'Correct!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
         } 
-        else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == 5){
+        else if (this.innerHTML != questions[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
             currentQuestion++;
             quizBox.style.backgroundColor = "red";
             questionH2.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + questions[q].correctAnswer + '</strong>' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
