@@ -85,11 +85,11 @@ let questionBox = document.getElementById('question-box');
 let questionH2 = document.getElementById('question-h2')
 let answerButton = document.getElementsByClassName('answer-button');
 let nextButton = document.getElementById('next-button');
-let scoretracker = document.getElementById('score');
-let b1 = document.getElementById('button-1');
-let b2 = document.getElementById('button-2');
-let b3 = document.getElementById('button-3');
-let b4 = document.getElementById('button-4');
+let scoreTracker = document.getElementById('score');
+let button1 = document.getElementById('button-1');
+let button2 = document.getElementById('button-2');
+let button3 = document.getElementById('button-3');
+let button4 = document.getElementById('button-4');
 
 let q = 0;
 let a = 0;
@@ -97,7 +97,7 @@ let correct = 0;
 let totalQuestions = 8;
 let currentQuestion = 0;
 
-scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
 function revealAnswer(event) {
         if (this.innerHTML === questions[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
@@ -123,7 +123,7 @@ function revealAnswer(event) {
             currentQuestion++;
         }
         
-        scoretracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+        scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 }
 for (i = 0; i < answerButton.length; i++){
     answerButton[i].addEventListener("click", revealAnswer);
