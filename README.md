@@ -1,12 +1,12 @@
 # Rock & Metal Quiz
 
-Rock & Metal Quiz is as the name suggests, a music themed quiz meant to test your knowledge specifically about rock and metal.
+Rock & Metal Quiz is, as the name suggests, a music themed quiz meant to test the users knowledge specifically about rock and metal.
 ![Main Quiz Page](media/responsiveness.png)
 
 ## **Features**
 
 - **Front Page** 
-  - The first thing the user sees is a white box with a simple welcome message and a start button that takes you to the actual quiz.
+  - The first thing the user sees is a white box with a simple welcome message, as well as start button that takes them to the actual quiz.
 
   - Behind the box is an image of a concert from the audience's perspective, covering the entire page.
 
@@ -67,7 +67,7 @@ The live link can be found here: [Rock & Metal Quiz](https://jonathanrange.githu
 ### Content
 - The code for the question array was taken from [SitePoint](https://www.sitepoint.com/simple-javascript-quiz/)
 
-- The code for the 'revealAnswer' function was modified from Code Institute's 'JavaScript Essentials' course.
+- The code for the function to reveal the correct answer was modified from Code Institute's 'JavaScript Essentials' course.
 
 ### Media
-- The background image was taken from [Pixabay](https://pixabay.com/) 
+- The background image was taken from [Pixabay](https://pixabay.com/)
