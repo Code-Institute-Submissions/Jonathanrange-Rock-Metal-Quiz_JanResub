@@ -47,6 +47,9 @@ Rock & Metal Quiz is as the name suggests, a music themed quiz meant to test you
 - CSS
     - No errors were found when passing through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/)
 
+- JavaScript
+    - No errors were found when passing through the [JSHint Validator](https://jshint.com/)
+
 ### Unfixed Bugs
 No unfixed bugs
 
