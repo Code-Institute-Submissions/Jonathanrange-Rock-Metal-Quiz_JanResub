@@ -51,14 +51,23 @@ button:hover {
 }
 
 #start-button {
+    width: 100%;
+    height: 15%;
     font-family: Kanit, sans-serif;
     font-size: 170%;
     font-weight: 500;
     height: 30%;
     width: 40%;
-    margin: 0%;
+    background-color: rgb(230, 230, 230);
     border: 0.5px solid gray;
     border-radius: 10px 10px;
+    display: block;
+    padding-top: 1%;
+    margin: 0 auto;
+}
+
+#start-button:hover {
+    background-color:rgb(240, 240, 240);   
 }
 
 #question-box {

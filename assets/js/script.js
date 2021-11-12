@@ -80,11 +80,13 @@ let questions = [
         correctAnswer: 'Metal (Preferably LOUD)'
     }
 ]
+
 let quizBox = document.getElementById('quiz-box');
 let questionBox = document.getElementById('question-box');
 let questionH2 = document.getElementById('question-h2')
 let answerButton = document.getElementsByClassName('answer-button');
 let nextButton = document.getElementById('next-button');
+let restartButton = document.getElementById('restart-button');
 let scoreTracker = document.getElementById('score');
 let button1 = document.getElementById('button-1');
 let button2 = document.getElementById('button-2');
@@ -153,4 +155,9 @@ function nextQuestion(){
     else {
         alert('Please select your answer to continue');
     }
+}
+
+restartButton.addEventListener('click', restartQuiz);
+function restartQuiz(){
+    location.reload();
 }
