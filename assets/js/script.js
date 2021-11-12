@@ -79,20 +79,14 @@ let questions = [
         },
         correctAnswer: 'Metal (Preferably LOUD)'
     }
-]
+];
 
 let quizBox = document.getElementById('quiz-box');
-let questionBox = document.getElementById('question-box');
-let questionH2 = document.getElementById('question-h2')
+let questionH2 = document.getElementById('question-h2');
 let answerButton = document.getElementsByClassName('answer-button');
 let nextButton = document.getElementById('next-button');
 let restartButton = document.getElementById('restart-button');
 let scoreTracker = document.getElementById('score');
-let button1 = document.getElementById('button-1');
-let button2 = document.getElementById('button-2');
-let button3 = document.getElementById('button-3');
-let button4 = document.getElementById('button-4');
-
 let q = 0;
 let a = 0;
 let correct = 0;
@@ -115,7 +109,7 @@ function revealAnswer(event) {
             } 
         else if (this.innerHTML === questions[q].correctAnswer && currentQuestion == q){
             quizBox.style.backgroundColor = "chartreuse";
-            questionH2.innerHTML = 'Correct!'
+            questionH2.innerHTML = 'Correct!';
             correct++;
             currentQuestion++;
         } 
@@ -127,6 +121,7 @@ function revealAnswer(event) {
         
         scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 }
+let i;
 for (i = 0; i < answerButton.length; i++){
     answerButton[i].addEventListener("click", revealAnswer);
 }

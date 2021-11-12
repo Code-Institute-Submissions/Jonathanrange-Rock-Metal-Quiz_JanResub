@@ -8,30 +8,29 @@ Rock & Metal Quiz is as the name suggests, a music themed quiz meant to test you
 - **Front Page** 
   - The first thing the user sees is a white box with a simple welcome message and a start button that takes you to the actual quiz.
 
-  -Behind the box is an image of a concert from the audience's perspective, covering the entire page.
+  - Behind the box is an image of a concert from the audience's perspective, covering the entire page.
 
 ![Front Page](media/index.png)
 
 - **Quiz Page**
- - The quiz page is comprised of a total of 8 questions, with 4 options to chose from for every question. The users total score is displayed at the bottom right of the box.
-
+  - The quiz page is comprised of a total of 8 questions, with 4 options to chose from for every question. The users total score is displayed at the bottom right of the box.
 ![Question](media/quizpage.png)
 
-- A correct answer will trigger a message along with a green background.
+  - A correct answer will trigger a message along with a green background.
 ![Correct Answer](media/correctanswer.png)
 
-- An incorrect answer will trigger a message along with a red background. It will also display the correct answer.
+  - An incorrect answer will trigger a message along with a red background. It will also display the correct answer.
 ![Incorrect Answer](media/incorrectanswer.png)
 
 - **Navigation**
-  - The navigation consists of 2 simple buttons at the bottom right of the box.
+  - The navigation consists of 2 simple buttons at the bottom right of the box and a header at the top of the page.
+
+  - Clicking the header will take the user back to the front page.
 
   - The button named 'Restart' will reload the page and let the user start over.
 
   - The button named 'Next Question' will take the user to the next question after choosing an answer. If they did not choose one, an alert will pop up, telling them to do so.
   ![Alert](media/alert.png)
-
-  - Clicking the header at the top of will take the user back to the front page.
 
 ### Testing
 
@@ -43,10 +42,10 @@ Rock & Metal Quiz is as the name suggests, a music themed quiz meant to test you
 
 ### Validator Testing
 - HTML
-    - No errors were found when passing through the official [W3C Validator]
+    - No errors were found when passing through the official [W3C Validator](https://validator.w3.org/nu/)
 
 - CSS
-    - No errors were found when passing through the official [(Jigsaw) Validator]
+    - No errors were found when passing through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/)
 
 ### Unfixed Bugs
 No unfixed bugs
