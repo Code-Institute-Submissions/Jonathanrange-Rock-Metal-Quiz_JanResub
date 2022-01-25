@@ -1,3 +1,4 @@
+// Stores all questions, alternatives and correct answers in a variable.
 let questions = [
     {
         question: '<strong>#1.</strong> Which band is often cited as being one of the founders of heavy metal?',
@@ -81,6 +82,7 @@ let questions = [
     }
 ];
 
+// Gets all the elements needed and stores them in variables:
 let quizBox = document.getElementById('quiz-box');
 let questionH2 = document.getElementById('question-h2');
 let answerButton = document.getElementsByClassName('answer-button');
@@ -95,6 +97,11 @@ let currentQuestion = 0;
 
 scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
+/* 
+Displays a message based on user input. 
+A correct answer will trigger a green background and a "correct" message.
+An incorrect answer will trigger a red background, an "incorrect" message, as well as the correct answer.
+*/
 function revealAnswer(event) {
         if (this.innerHTML === questions[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
             correct++;
@@ -119,13 +126,14 @@ function revealAnswer(event) {
             currentQuestion++;
         }
         
-        scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+        scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions; // Displays a value based on correctly answered questions and the total amount of questions.
 }
 let i;
 for (i = 0; i < answerButton.length; i++){
     answerButton[i].addEventListener("click", revealAnswer);
 }
 
+// Displays all questions/alternatives:
 questionH2.innerHTML = questions[q].question;
 answerButton[0].innerHTML = questions[a].answers.A;
 answerButton[1].innerHTML = questions[a].answers.B;
@@ -133,6 +141,11 @@ answerButton[2].innerHTML = questions[a].answers.C;
 answerButton[3].innerHTML = questions[a].answers.D;
 
 nextButton.addEventListener('click', nextQuestion);
+
+/* 
+Takes the user to the next question if the current question has been answered.
+If not, or if the quiz is over, an alert will be triggered accordingly.
+*/
 function nextQuestion(){
     if (currentQuestion == totalQuestions){
         alert('Click the restart button to try again');
@@ -152,6 +165,7 @@ function nextQuestion(){
     }
 }
 
+// Reloads/resets the entire quiz when button is clicked:
 restartButton.addEventListener('click', restartQuiz);
 function restartQuiz(){
     location.reload();
