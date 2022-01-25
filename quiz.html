@@ -10,23 +10,31 @@
     <title>Rock & Metal Quiz</title>
 </head>
 <body>
-    <h1><a href="index.html">Rock & Metal Quiz</a></h1>
-    <div id="quiz-box">
-        <div id="question-box">
-            <h2 id="question-h2"></h2>
+    <header> <!--header section-->
+        <h1><a href="index.html">Rock & Metal Quiz</a></h1>
+    </header>
+
+    <section> <!--quiz section/main content-->
+        <div id="quiz-box"> <!--questions-->
+            <div id="question-box">
+                <h2 id="question-h2"></h2>
+            </div>
+
+            <div id="answer-box"> <!--answers/alternatives-->
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+            </div>
+
+            <div id="quiz-navigation"> <!--bottom navigation and score-tracker-->
+                <button id="restart-button">Restart Quiz</button>
+                <button id="next-button">Next question</button>
+                <p id="score">Score:</p>
+            </div>
         </div>
-        <div id="answer-box">
-            <button class="answer-button"></button>
-            <button class="answer-button"></button>
-            <button class="answer-button"></button>
-            <button class="answer-button"></button>
-        </div>
-        <div id="quiz-bottom">
-            <button id="restart-button">Restart Quiz</button>
-            <button id="next-button">Next question</button>
-            <p id="score">Score:</p>
-        </div>
-    </div>
+    </section>
+
 <script src="assets/js/script.js"></script>    
 </body>
 </html>

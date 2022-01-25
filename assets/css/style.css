@@ -102,14 +102,14 @@ button:hover {
     border-radius: 10px 10px;
 }
 
-#quiz-bottom {
+#quiz-navigation {
     font-family: Kanit, sans-serif;
     text-align: right;
     margin-right: 2%;
     margin-top: 2%;
 }
 
-#quiz-bottom button {
+#quiz-navigation button {
     border: 0.5px solid gray;
     border-radius: 10px 10px;
 }
